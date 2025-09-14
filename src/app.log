@@ -1,0 +1,223 @@
+2025-09-14T00:26:53.398Z [info]: Server started on http://localhost:3000
+2025-09-14T00:27:53.696Z [info]: Incoming POST : /users/login
+2025-09-14T00:27:53.898Z [info]: Get command to database complete {"SK":"PROFILE","password":"$2b$10$4JpRC7c2DO6yZ.2MZG/Rte9l3KF04O426mft5RgKDxSad3p312HDy","PK":"USER#user1","role":"employee"}
+2025-09-14T00:27:53.976Z [info]: User logged in successfully user1
+2025-09-14T00:29:02.525Z [info]: Incoming GET : /tickets/user1
+2025-09-14T00:33:01.554Z [info]: Server started on http://localhost:3000
+2025-09-14T00:33:08.835Z [info]: Incoming GET : /tickets/user1
+2025-09-14T00:36:37.090Z [info]: Server started on http://localhost:3000
+2025-09-14T00:36:41.712Z [info]: Incoming GET : /tickets/user1
+2025-09-14T00:41:44.390Z [info]: Server started on http://localhost:3000
+2025-09-14T00:41:49.745Z [info]: Incoming POST : /users/login
+2025-09-14T00:41:50.109Z [info]: Get command to database complete {"SK":"PROFILE","password":"$2b$10$4JpRC7c2DO6yZ.2MZG/Rte9l3KF04O426mft5RgKDxSad3p312HDy","PK":"USER#user1","role":"employee"}
+2025-09-14T00:41:50.212Z [info]: User logged in successfully user1
+2025-09-14T00:44:13.990Z [info]: Server started on http://localhost:3000
+2025-09-14T00:44:22.798Z [info]: Incoming POST : /users/login
+2025-09-14T00:44:23.002Z [info]: Get command to database complete {"SK":"PROFILE","password":"$2b$10$4JpRC7c2DO6yZ.2MZG/Rte9l3KF04O426mft5RgKDxSad3p312HDy","PK":"USER#user1","role":"employee"}
+2025-09-14T00:44:23.083Z [info]: User logged in successfully user1
+2025-09-14T00:45:38.771Z [info]: Incoming GET : /tickets/user1
+2025-09-14T00:45:38.955Z [info]: Get command to database complete [{"amount":600,"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","description":"equipment","PK":"USER#user1","type":"general","status":"Pending"},{"amount":14.22,"SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","description":"training","PK":"USER#user1","type":"general","status":"Pending"},{"amount":200.4,"SK":"TICKET#ticket2","PK":"USER#user1","description":"client dinner","status":"Approved","type":"food"}]
+2025-09-14T00:45:38.957Z [info]: Ticket history retrieved successfully for user1
+2025-09-14T00:46:18.064Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T00:48:05.595Z [info]: Incoming PATCH : /tickets/20b623ed-d1b6-4136-b11b-5defcb282df2
+2025-09-14T00:48:28.881Z [info]: Incoming PATCH : /tickets/20b623ed-d1b6-4136-b11b-5defcb282df2
+2025-09-14T00:50:04.776Z [info]: Incoming POST : /tickets/
+2025-09-14T00:50:05.009Z [info]: PUT command to databse complete {"PK":"USER#user1","SK":"TICKET#1077635b-fc1a-4201-9be6-3f2dcd70f596","amount":10,"description":"donation","type":"goodwill","status":"Pending"}
+2025-09-14T00:50:05.010Z [info]: Created new ticket: {"PK":"USER#user1","SK":"TICKET#1077635b-fc1a-4201-9be6-3f2dcd70f596","amount":10,"description":"donation","type":"goodwill","status":"Pending"}
+2025-09-14T00:54:48.484Z [info]: Server started on http://localhost:3000
+2025-09-14T00:55:54.408Z [info]: Incoming POST : /users/login
+2025-09-14T00:55:54.712Z [info]: Get command to database complete {"SK":"PROFILE","password":"$2b$10$nsFgKaedcJOzwqaS3IKi8.iHnWqqQ6b/ZvwbG5UAsqsZk66rvpoS6","PK":"USER#manager1","role":"manager"}
+2025-09-14T00:55:54.794Z [info]: User logged in successfully manager1
+2025-09-14T00:56:44.270Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T00:56:44.408Z [info]: Scan command to database complete []
+2025-09-14T00:56:44.414Z [info]: 'Pending' tickets retrieved successfully
+2025-09-14T00:57:36.971Z [info]: Incoming GET : /tickets/user1
+2025-09-14T01:00:21.446Z [info]: Incoming POST : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T01:00:41.178Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T01:00:59.789Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T01:08:17.295Z [info]: Server started on http://localhost:3000
+2025-09-14T01:08:21.709Z [info]: Incoming GET : /tickets/user1
+2025-09-14T01:08:59.332Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T01:08:59.584Z [info]: Scan command to database complete []
+2025-09-14T01:08:59.585Z [info]: 'Pending' tickets retrieved successfully
+2025-09-14T01:14:10.865Z [info]: Server started on http://localhost:3000
+2025-09-14T01:14:15.519Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T01:14:15.761Z [info]: Scan command to database complete []
+2025-09-14T01:14:15.763Z [info]: 'Pending' tickets retrieved successfully
+2025-09-14T01:24:33.621Z [info]: Server started on http://localhost:3000
+2025-09-14T01:24:40.634Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T01:24:40.860Z [error]: Invalid FilterExpression: Attribute name is a reserved keyword; reserved keyword: status
+2025-09-14T01:24:40.862Z [info]: No 'Pending' tickets found
+2025-09-14T01:25:35.199Z [info]: Server started on http://localhost:3000
+2025-09-14T01:25:40.218Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T01:25:40.445Z [info]: Scan command to database complete []
+2025-09-14T01:25:40.445Z [info]: 'Pending' tickets retrieved successfully
+2025-09-14T01:27:10.825Z [info]: Server started on http://localhost:3000
+2025-09-14T01:27:15.236Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T01:27:15.538Z [info]: Scan command to database complete []
+2025-09-14T01:27:15.539Z [info]: 'Pending' tickets retrieved successfully
+2025-09-14T01:30:23.789Z [info]: Server started on http://localhost:3000
+2025-09-14T01:30:29.375Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T01:30:29.587Z [info]: Scan command to database complete []
+2025-09-14T01:30:29.588Z [info]: 'Pending' tickets retrieved successfully
+2025-09-14T01:39:05.298Z [info]: Server started on http://localhost:3000
+2025-09-14T01:39:15.884Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T01:39:16.068Z [info]: Scan command to database complete [{"amount":22,"SK":"TICKET#496e3cfc-1d9f-4a2e-ab67-e65fcbd8b210","description":"entertainment","PK":"USER#user3","type":"entertainment","status":"Pending"},{"amount":10,"SK":"TICKET#1077635b-fc1a-4201-9be6-3f2dcd70f596","description":"donation","PK":"USER#user1","type":"goodwill","status":"Pending"},{"amount":600,"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","description":"equipment","PK":"USER#user1","type":"general","status":"Pending"},{"amount":14.22,"SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","description":"training","PK":"USER#user1","type":"general","status":"Pending"}]
+2025-09-14T01:39:16.069Z [info]: 'Pending' tickets retrieved successfully
+2025-09-14T01:40:35.468Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T01:43:36.692Z [info]: Server started on http://localhost:3000
+2025-09-14T01:43:41.633Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T01:45:45.358Z [info]: Server started on http://localhost:3000
+2025-09-14T01:45:50.342Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T01:52:18.571Z [info]: Server started on http://localhost:3000
+2025-09-14T01:52:22.822Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T01:57:17.912Z [info]: Server started on http://localhost:3000
+2025-09-14T01:57:24.044Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T01:58:37.594Z [info]: Server started on http://localhost:3000
+2025-09-14T01:58:42.821Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T01:58:42.824Z [error]: jwt expired
+2025-09-14T01:59:47.605Z [info]: Incoming POST : /users/login
+2025-09-14T01:59:47.800Z [info]: Get command to database complete {"SK":"PROFILE","password":"$2b$10$nsFgKaedcJOzwqaS3IKi8.iHnWqqQ6b/ZvwbG5UAsqsZk66rvpoS6","PK":"USER#manager1","role":"manager"}
+2025-09-14T01:59:47.884Z [info]: User logged in successfully manager1
+2025-09-14T02:01:24.875Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T02:01:40.696Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T02:01:40.867Z [error]: Invalid ConditionExpression: An expression attribute value used in expression is not defined; attribute value: :pending
+2025-09-14T02:01:40.869Z [info]: ticket update failed : 1077635b-fc1a-4201-9be6-3f2dcd70f596 status Approved
+2025-09-14T02:05:42.671Z [info]: Server started on http://localhost:3000
+2025-09-14T02:05:49.386Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T02:05:49.724Z [error]: The conditional request failed
+2025-09-14T02:05:49.725Z [info]: Ticket is already processed: 1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T02:13:24.309Z [info]: Server started on http://localhost:3000
+2025-09-14T02:13:33.662Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T02:13:33.903Z [error]: Invalid ConditionExpression: An expression attribute value used in expression is not defined; attribute value: :oldStatus
+2025-09-14T02:13:33.904Z [info]: ticket update failed : 1077635b-fc1a-4201-9be6-3f2dcd70f596 status Approved
+2025-09-14T02:14:45.758Z [info]: Server started on http://localhost:3000
+2025-09-14T02:14:50.711Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T02:14:50.922Z [error]: The conditional request failed
+2025-09-14T02:14:50.924Z [info]: Ticket is already processed: 1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T14:32:31.206Z [info]: Server started on http://localhost:3000
+2025-09-14T14:33:34.949Z [info]: Incoming POST : /users/login
+2025-09-14T14:33:35.148Z [info]: Get command to database complete {"SK":"PROFILE","password":"$2b$10$nsFgKaedcJOzwqaS3IKi8.iHnWqqQ6b/ZvwbG5UAsqsZk66rvpoS6","PK":"USER#manager1","role":"manager"}
+2025-09-14T14:33:35.218Z [info]: User logged in successfully manager1
+2025-09-14T14:35:03.779Z [info]: Incoming POST : /ticket
+2025-09-14T14:35:17.000Z [info]: Incoming POST : /tickets
+2025-09-14T14:35:17.206Z [info]: PUT command to databse complete {"PK":"USER#manager1","SK":"TICKET#40ca5f8a-0bf9-45ff-bb68-52b633d3fc7f","amount":1,"description":"expanses","type":"general","status":"Pending"}
+2025-09-14T14:35:17.206Z [info]: Created new ticket: {"PK":"USER#manager1","SK":"TICKET#40ca5f8a-0bf9-45ff-bb68-52b633d3fc7f","amount":1,"description":"expanses","type":"general","status":"Pending"}
+2025-09-14T14:36:06.124Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T14:36:06.155Z [info]: Scan command to database complete []
+2025-09-14T14:36:06.156Z [info]: 'Pending' tickets retrieved successfully
+2025-09-14T14:38:11.656Z [info]: Server started on http://localhost:3000
+2025-09-14T14:38:17.804Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T14:38:18.041Z [info]: Scan command to database complete []
+2025-09-14T14:38:18.042Z [info]: 'Pending' tickets retrieved successfully
+2025-09-14T14:47:00.303Z [info]: Server started on http://localhost:3000
+2025-09-14T14:47:23.999Z [info]: Incoming POST : /tickets
+2025-09-14T14:49:24.697Z [info]: Server started on http://localhost:3000
+2025-09-14T14:49:29.727Z [info]: Incoming POST : /tickets
+2025-09-14T14:49:58.812Z [info]: Incoming GET : /tickets
+2025-09-14T14:49:59.030Z [info]: Scan command to database complete []
+2025-09-14T14:49:59.030Z [info]: Pending tickets retrieved successfully
+2025-09-14T14:51:37.259Z [info]: Server started on http://localhost:3000
+2025-09-14T14:51:46.625Z [info]: Incoming GET : /tickets
+2025-09-14T14:51:46.814Z [info]: Scan command to database complete []
+2025-09-14T14:51:46.814Z [info]: Pending tickets retrieved successfully
+2025-09-14T14:53:01.316Z [info]: Server started on http://localhost:3000
+2025-09-14T14:53:08.223Z [info]: Incoming GET : /tickets
+2025-09-14T14:53:08.512Z [info]: Scan command to database complete [{"amount":22,"SK":"TICKET#496e3cfc-1d9f-4a2e-ab67-e65fcbd8b210","description":"entertainment","PK":"USER#user3","type":"entertainment","status":"Pending"},{"amount":10,"SK":"TICKET#1077635b-fc1a-4201-9be6-3f2dcd70f596","description":"donation","PK":"USER#user1","type":"goodwill","status":"Pending"},{"amount":600,"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","description":"equipment","PK":"USER#user1","type":"general","status":"Pending"},{"amount":14.22,"SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","description":"training","PK":"USER#user1","type":"general","status":"Pending"}]
+2025-09-14T14:53:08.513Z [info]: Pending tickets retrieved successfully
+2025-09-14T14:53:42.628Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T14:53:42.663Z [info]: Scan command to database complete [{"amount":22,"SK":"TICKET#496e3cfc-1d9f-4a2e-ab67-e65fcbd8b210","description":"entertainment","PK":"USER#user3","type":"entertainment","status":"Pending"},{"amount":10,"SK":"TICKET#1077635b-fc1a-4201-9be6-3f2dcd70f596","description":"donation","PK":"USER#user1","type":"goodwill","status":"Pending"},{"amount":600,"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","description":"equipment","PK":"USER#user1","type":"general","status":"Pending"},{"amount":14.22,"SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","description":"training","PK":"USER#user1","type":"general","status":"Pending"}]
+2025-09-14T14:53:42.664Z [info]: 'Pending' tickets retrieved successfully
+2025-09-14T14:54:33.997Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T14:54:48.683Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T14:55:11.199Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T14:55:23.015Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T14:55:23.045Z [error]: The conditional request failed
+2025-09-14T14:55:23.047Z [info]: Ticket is already processed: 1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T15:01:20.834Z [info]: Server started on http://localhost:3000
+2025-09-14T15:01:27.952Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T15:01:28.169Z [error]: The conditional request failed
+2025-09-14T15:01:28.170Z [info]: Ticket is already processed: 1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T15:02:51.103Z [info]: Server started on http://localhost:3000
+2025-09-14T15:02:58.786Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T15:02:59.063Z [error]: The conditional request failed
+2025-09-14T15:02:59.064Z [info]: Ticket is already processed: 1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T15:03:52.098Z [info]: Incoming PATCH : /tickets/8aa42aa7-2a9c-42b1-a5c4-2d551715a043
+2025-09-14T15:03:52.162Z [error]: The conditional request failed
+2025-09-14T15:03:52.192Z [info]: Ticket is already processed: 8aa42aa7-2a9c-42b1-a5c4-2d551715a043
+2025-09-14T15:04:58.296Z [info]: Server started on http://localhost:3000
+2025-09-14T15:05:03.427Z [info]: Incoming PATCH : /tickets/8aa42aa7-2a9c-42b1-a5c4-2d551715a043
+2025-09-14T15:05:03.682Z [error]: The conditional request failed
+2025-09-14T15:05:03.687Z [info]: Ticket is already processed: 8aa42aa7-2a9c-42b1-a5c4-2d551715a043
+2025-09-14T15:06:27.372Z [info]: Server started on http://localhost:3000
+2025-09-14T15:06:31.541Z [info]: Incoming PATCH : /tickets/8aa42aa7-2a9c-42b1-a5c4-2d551715a043
+2025-09-14T15:06:31.732Z [info]: PUT command to databse complete {"PK":"USER#manager1","SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","status":"Approved"}
+2025-09-14T15:06:31.733Z [info]: Updated ticket 8aa42aa7-2a9c-42b1-a5c4-2d551715a043 status Approved
+2025-09-14T15:17:01.018Z [info]: Server started on http://localhost:3000
+2025-09-14T15:17:59.393Z [info]: Incoming PATCH : /tickets/user1/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T15:17:59.791Z [info]: PUT command to databse complete {"SK":"TICKET#1077635b-fc1a-4201-9be6-3f2dcd70f596","amount":10,"PK":"USER#user1","description":"donation","status":"Approved","type":"goodwill"}
+2025-09-14T15:17:59.796Z [info]: Updated ticket 1077635b-fc1a-4201-9be6-3f2dcd70f596 status Approved
+2025-09-14T15:18:23.462Z [info]: Incoming PATCH : /tickets/user1/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T15:18:23.619Z [info]: PUT command to databse complete {"SK":"TICKET#1077635b-fc1a-4201-9be6-3f2dcd70f596","amount":10,"PK":"USER#user1","description":"donation","status":"Approved","type":"goodwill"}
+2025-09-14T15:18:23.667Z [info]: Updated ticket 1077635b-fc1a-4201-9be6-3f2dcd70f596 status Approved
+2025-09-14T15:18:54.502Z [info]: Incoming GET : /tickets/user1
+2025-09-14T15:19:11.603Z [info]: Incoming GET : /tickets
+2025-09-14T15:19:11.648Z [info]: Scan command to database complete [{"amount":22,"SK":"TICKET#496e3cfc-1d9f-4a2e-ab67-e65fcbd8b210","description":"entertainment","PK":"USER#user3","type":"entertainment","status":"Pending"},{"amount":600,"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","description":"equipment","PK":"USER#user1","type":"general","status":"Pending"},{"amount":14.22,"SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","description":"training","PK":"USER#user1","type":"general","status":"Pending"}]
+2025-09-14T15:19:11.649Z [info]: Pending tickets retrieved successfully
+2025-09-14T15:57:37.765Z [info]: Server started on http://localhost:3000
+2025-09-14T15:57:43.240Z [info]: Incoming GET : /tickets
+2025-09-14T15:57:43.255Z [error]: jwt expired
+2025-09-14T15:58:43.068Z [info]: Incoming POST : /users/login
+2025-09-14T15:58:43.278Z [info]: Get command to database complete {"password":"$2b$10$nsFgKaedcJOzwqaS3IKi8.iHnWqqQ6b/ZvwbG5UAsqsZk66rvpoS6","PK":"USER#manager1","role":"manager","SK":"PROFILE"}
+2025-09-14T15:58:43.349Z [info]: User logged in successfully manager1
+2025-09-14T15:59:39.033Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T15:59:39.192Z [info]: Scan command to database complete []
+2025-09-14T15:59:39.193Z [info]: 'Pending' tickets retrieved successfully
+2025-09-14T16:00:02.655Z [info]: Incoming GET : /tickets
+2025-09-14T16:00:02.704Z [info]: Scan command to database complete [{"amount":22,"SK":"TICKET#496e3cfc-1d9f-4a2e-ab67-e65fcbd8b210","description":"entertainment","PK":"USER#user3","type":"entertainment","status":"Pending"},{"amount":600,"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","description":"equipment","PK":"USER#user1","type":"general","status":"Pending"},{"amount":14.22,"SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","description":"training","PK":"USER#user1","type":"general","status":"Pending"}]
+2025-09-14T16:00:02.706Z [info]: Pending tickets retrieved successfully
+2025-09-14T16:00:31.036Z [info]: Incoming GET : /tickets?status=%27Denied%27
+2025-09-14T16:00:31.080Z [info]: Scan command to database complete []
+2025-09-14T16:00:31.082Z [info]: 'Denied' tickets retrieved successfully
+2025-09-14T16:00:48.572Z [info]: Incoming GET : /tickets
+2025-09-14T16:00:48.613Z [info]: Scan command to database complete [{"amount":22,"SK":"TICKET#496e3cfc-1d9f-4a2e-ab67-e65fcbd8b210","description":"entertainment","PK":"USER#user3","type":"entertainment","status":"Pending"},{"amount":600,"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","description":"equipment","PK":"USER#user1","type":"general","status":"Pending"},{"amount":14.22,"SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","description":"training","PK":"USER#user1","type":"general","status":"Pending"}]
+2025-09-14T16:00:48.620Z [info]: Pending tickets retrieved successfully
+2025-09-14T16:02:08.948Z [info]: Incoming PATCH : /tickets/user1/8aa42aa7-2a9c-42b1-a5c4-2d551715a043
+2025-09-14T16:02:09.093Z [info]: PUT command to databse complete {"SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","amount":14.22,"PK":"USER#user1","description":"training","status":"Approved","type":"general"}
+2025-09-14T16:02:09.094Z [info]: Updated ticket 8aa42aa7-2a9c-42b1-a5c4-2d551715a043 status Approved
+2025-09-14T16:06:08.722Z [info]: Server started on http://localhost:3000
+2025-09-14T16:06:46.974Z [info]: Incoming GET : /tickets?status=%27Pending%27
+2025-09-14T16:06:47.195Z [info]: Scan command to database complete []
+2025-09-14T16:06:47.196Z [info]: 'Pending' tickets retrieved successfully
+2025-09-14T16:09:20.760Z [info]: Server started on http://localhost:3000
+2025-09-14T16:09:36.238Z [info]: Incoming GET : /tickets?status=Pending
+2025-09-14T16:09:36.459Z [info]: Scan command to database complete [{"amount":22,"SK":"TICKET#496e3cfc-1d9f-4a2e-ab67-e65fcbd8b210","description":"entertainment","PK":"USER#user3","type":"entertainment","status":"Pending"},{"amount":600,"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","description":"equipment","PK":"USER#user1","type":"general","status":"Pending"}]
+2025-09-14T16:09:36.460Z [info]: Pending tickets retrieved successfully
+2025-09-14T16:09:56.488Z [info]: Incoming GET : /tickets?status=Denied
+2025-09-14T16:09:56.524Z [info]: Scan command to database complete [{"amount":10,"SK":"TICKET#1077635b-fc1a-4201-9be6-3f2dcd70f596","PK":"USER#user1","description":"donation","status":"Denied","type":"goodwill"}]
+2025-09-14T16:09:56.524Z [info]: Denied tickets retrieved successfully
+2025-09-14T16:10:08.051Z [info]: Incoming GET : /tickets?status=Approved
+2025-09-14T16:10:08.085Z [info]: Scan command to database complete [{"amount":14.22,"SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","PK":"USER#user1","description":"training","status":"Approved","type":"general"},{"amount":200.4,"SK":"TICKET#ticket2","PK":"USER#user1","description":"client dinner","status":"Approved","type":"food"}]
+2025-09-14T16:10:08.086Z [info]: Approved tickets retrieved successfully
+2025-09-14T16:10:21.878Z [info]: Incoming GET : /tickets?status=OnHold
+2025-09-14T16:10:21.911Z [info]: Scan command to database complete []
+2025-09-14T16:10:21.911Z [info]: OnHold tickets retrieved successfully
+2025-09-14T16:11:38.615Z [info]: Incoming POST : /tickets
+2025-09-14T16:12:53.033Z [info]: Server started on http://localhost:3000
+2025-09-14T16:13:42.045Z [info]: Incoming POST : /users/login
+2025-09-14T16:13:42.244Z [info]: Get command to database complete {"SK":"PROFILE","password":"$2b$10$4JpRC7c2DO6yZ.2MZG/Rte9l3KF04O426mft5RgKDxSad3p312HDy","PK":"USER#user1","role":"employee"}
+2025-09-14T16:13:42.308Z [info]: User logged in successfully user1
+2025-09-14T16:14:44.624Z [info]: Incoming GET : /tickets?status=Pending
+2025-09-14T16:15:01.461Z [info]: Incoming GET : /tickets/user1
+2025-09-14T16:15:01.617Z [info]: Query command to database complete [{"amount":10,"SK":"TICKET#1077635b-fc1a-4201-9be6-3f2dcd70f596","PK":"USER#user1","description":"donation","status":"Denied","type":"goodwill"},{"amount":600,"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","description":"equipment","PK":"USER#user1","type":"general","status":"Pending"},{"amount":14.22,"SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","PK":"USER#user1","description":"training","status":"Approved","type":"general"},{"amount":200.4,"SK":"TICKET#ticket2","PK":"USER#user1","description":"client dinner","status":"Approved","type":"food"}]
+2025-09-14T16:15:01.618Z [info]: Ticket history retrieved successfully for user1
+2025-09-14T16:15:25.022Z [info]: Incoming GET : /tickets/user2
+2025-09-14T16:16:20.694Z [info]: Incoming PATCH : /tickets/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T16:17:04.005Z [info]: Incoming PATCH : /tickets/user1/1077635b-fc1a-4201-9be6-3f2dcd70f596
+2025-09-14T16:19:08.760Z [info]: Incoming POST : /tickets/
+2025-09-14T16:19:08.992Z [info]: PUT command to databse complete {"PK":"USER#user1","SK":"TICKET#621c1b1e-a291-4eec-bd39-82b2d29223bf","amount":22,"description":"lodging","type":"travel","status":"Pending"}
+2025-09-14T16:19:08.995Z [info]: Created new ticket: {"PK":"USER#user1","SK":"TICKET#621c1b1e-a291-4eec-bd39-82b2d29223bf","amount":22,"description":"lodging","type":"travel","status":"Pending"}
+2025-09-14T16:19:29.427Z [info]: Incoming GET : /tickets/
+2025-09-14T16:20:13.574Z [info]: Incoming GET : /tickets/user1
+2025-09-14T16:20:13.642Z [info]: Query command to database complete [{"amount":10,"SK":"TICKET#1077635b-fc1a-4201-9be6-3f2dcd70f596","PK":"USER#user1","description":"donation","status":"Denied","type":"goodwill"},{"amount":600,"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","description":"equipment","PK":"USER#user1","type":"general","status":"Pending"},{"amount":22,"SK":"TICKET#621c1b1e-a291-4eec-bd39-82b2d29223bf","description":"lodging","PK":"USER#user1","type":"travel","status":"Pending"},{"amount":14.22,"SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","PK":"USER#user1","description":"training","status":"Approved","type":"general"},{"amount":200.4,"SK":"TICKET#ticket2","PK":"USER#user1","description":"client dinner","status":"Approved","type":"food"}]
+2025-09-14T16:20:13.667Z [info]: Ticket history retrieved successfully for user1
