@@ -10,7 +10,7 @@ async function authenticateToken(req, res, next){
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];
     if(!token){
-        res.status(400).json({message: "forbidden access"});
+        res.status(400).json({message: "Forbidden access"});
     }else{
         const user = await decodeJWT(token);
         if(user){

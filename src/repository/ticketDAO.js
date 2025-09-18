@@ -2,10 +2,10 @@ const {DynamoDBClient} = require('@aws-sdk/client-dynamodb');
 const {DynamoDBDocumentClient,PutCommand, QueryCommand, ScanCommand, UpdateCommand,GetCommand} = require('@aws-sdk/lib-dynamodb');
 const {logger} = require("../util/logger");
 
-    const client = new DynamoDBClient({region: "us-east-1"});
-    const documentClient = DynamoDBDocumentClient.from(client);
+const client = new DynamoDBClient({region: "us-east-1"});
+const documentClient = DynamoDBDocumentClient.from(client);
 
-    const TableName = 'TicketReimbursement';
+const TableName = 'TicketReimbursement';
 
     async function postTicket(ticket)
     {
@@ -23,20 +23,19 @@ const {logger} = require("../util/logger");
         const command = new PutCommand(params);
         try{
             const data = await documentClient.send(command);
-            logger.info(`PUT command to databse complete ${JSON.stringify(params.Item)}`);
+            logger.info(`ticketDAO : PUT command complete ${JSON.stringify(params.Item)}`);
             return params.Item;
         }catch(error)
         {
+            logger.info(`ticketDAO : PUT command failed ${JSON.stringify(ticket)}`);
             logger.error(error);
             return null;
         }
-
     }
 
     
     async function getTicketsByUser(userName)
     {
-        
         const command = new QueryCommand({
             TableName,
             KeyConditionExpression: "PK = :userName AND begins_with(SK, :ticketPrefix)",
@@ -47,30 +46,10 @@ const {logger} = require("../util/logger");
         });
         try{
             const data = await documentClient.send(command);
-            logger.info(`Query command to database complete ${JSON.stringify(data.Items)}`);
+            logger.info(`ticketDAO : Query command complete ${JSON.stringify(data.Items)}`);
             return data.Items;
         }catch(error){
-            logger.error(error);
-            return null;
-        }
-    }
-
-    async function getTicketsById(userName, ticketId)
-    {
-        
-        const params = {
-            TableName,
-            Key : {
-                PK : `USER#${userName}`,
-                SK : `TICKET#${ticketId}`,
-            }
-        };
-        const command = new GetCommand(params);
-        try{
-            const data = await documentClient.send(command);
-            logger.info(`Get command to database complete ${JSON.stringify(data.Item)}`);
-            return data.Item;
-        }catch(error){
+            logger.info(`ticketDAO : Query command failed ${userName}`);
             logger.error(error);
             return null;
         }
@@ -88,24 +67,18 @@ const {logger} = require("../util/logger");
         
         try{
             const data = await documentClient.send(command);
-            
-            logger.info(`Scan command to database complete ${JSON.stringify(data.Items)}`);
+            logger.info(`ticketDAO : Scan command complete ${JSON.stringify(data.Items)}`);
             return data.Items;
         }catch(error){
+            logger.info(`ticketDAO : Scan command failed ${status}`);
             logger.error(error);
             return null;
         }
     }
-
-   //getTicketsByStatus('Denied'); 
+ 
 
     async function updateTicketStatus(userName, ticketId, status)
     {
-       /* const ticket = await getTicketsById(userName,ticketId);
-        console.log(ticket);
-        if(ticket.status!=='Pending'){
-         return "Ticket is already processed";   
-        }*/
         const pendingStatus = "Pending";
         const command = new UpdateCommand({
             TableName,
@@ -121,22 +94,19 @@ const {logger} = require("../util/logger");
             });
         try{
             const data = await documentClient.send(command);
-            logger.info(`PUT command to databse complete ${JSON.stringify(data.Attributes)}`);
+            logger.info(`ticketDAO : Update command complete ${JSON.stringify(data.Attributes)}`);
             return data.Attributes;
         }catch(error)
         {
+            logger.info(`ticketDAO : Update command failed ${ticketId} ${status}`);
             logger.error(error);
             if(error.name === 'ConditionalCheckFailedException'){
-                return "Ticket is already processed";
+                return "Ticket either does not exist or is already processed";
             }
             else{
                 return null;
             }
         }
-
     }
 
-   //updateTicketStatus('user1','1077635b-fc1a-4201-9be6-3f2dcd70f596','Denied');
-
- 
     module.exports = {postTicket, getTicketsByUser, getTicketsByStatus, updateTicketStatus};

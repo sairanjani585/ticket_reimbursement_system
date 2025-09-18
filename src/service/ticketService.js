@@ -2,12 +2,8 @@ const ticketDAO = require("../repository/ticketDAO");
 const {logger} = require("../util/logger");
 
 
-//const validTicketStatuses = ["Pending", "Approved", "Denied"];
-
 async function postTicket(ticket) {
-    
     const ticketId = crypto.randomUUID();
-
     const newTicket = {
         ticketId,
         amount: ticket.amount,
@@ -15,7 +11,6 @@ async function postTicket(ticket) {
         description: ticket.description,
         type : ticket.type || 'general',
     };
-    try{
         const result = await ticketDAO.postTicket(newTicket);
         if(result){
             logger.info(`Created new ticket: ${JSON.stringify(result)}`);
@@ -23,20 +18,13 @@ async function postTicket(ticket) {
         else{
             logger.info(`Ticket could not be created: ${JSON.stringify(newTicket)}`);
         }
-        return result;
-    }catch(error){
-        logger.error(error);
-        return null;
-    }
-    
+        return result;   
 }
 
 async function updateTicketStatus(userName, ticketId, status) {
-    
-    try {
         const updatedTicket = await ticketDAO.updateTicketStatus(userName, ticketId, status);
-        if(updatedTicket==='Ticket is already processed'){
-            logger.info(`Ticket is already processed: ${ticketId}`);
+        if(updatedTicket==='Ticket either does not exist or is already processed'){
+            logger.info(`Ticket either does not exist or is already processed: ${ticketId}`);
         }
         else if(updatedTicket){
             logger.info(`Updated ticket ${ticketId} status ${status}`);
@@ -45,14 +33,9 @@ async function updateTicketStatus(userName, ticketId, status) {
             logger.info(`ticket update failed : ${ticketId} status ${status}`);
         }
         return updatedTicket;
-    } catch (error) {
-        logger.error(error);
-        return null;
-    }
 }
 
 async function getTicketsByStatus(status) {
-    try {
         const tickets = await ticketDAO.getTicketsByStatus(status);
         if(tickets){
             logger.info(`${status} tickets retrieved successfully`);
@@ -60,15 +43,9 @@ async function getTicketsByStatus(status) {
             logger.info(`No ${status} tickets found`);
         }
         return tickets;
-    } catch (error) {
-       logger.error(error);
-        return null;
-    }
 }
 
 async function getTicketsByUser(userName) {
-   
-    try {
         const tickets = await ticketDAO.getTicketsByUser(userName);
         if(tickets){
             logger.info(`Ticket history retrieved successfully for ${userName}`);
@@ -76,10 +53,6 @@ async function getTicketsByUser(userName) {
             logger.info(`No tickets found for ${userName}`);
         }
         return tickets;
-    } catch (error) {
-        logger.error(error);
-        return null;
-    }
 }
 
 module.exports = {
