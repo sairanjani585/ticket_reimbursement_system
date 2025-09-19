@@ -5,7 +5,6 @@ const userValidation = require('../util/userValidation');
 const jwt = require('jsonwebtoken');
 const bcrypt = require("bcrypt");
 
-
 const secretKey = "my-secret-key";
 
 userController.use(userValidation.validateUserMiddleware);
@@ -23,7 +22,6 @@ userController.post("/register", async (req, res) =>
     }
 
 } );
-
 
 userController.post("/login", async (req, res) => {
     const {userName, password} = req.body;

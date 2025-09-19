@@ -1,0 +1,73 @@
+2025-09-18T20:13:44.120Z [info]: Server is listening on http://localhost:3000
+2025-09-18T20:13:53.546Z [info]: Incoming POST : /users/register
+2025-09-18T20:13:53.926Z [info]: userDAO : PUT command complete {"PK":"USER#user2","SK":"PROFILE","password":"$2b$10$Ms./f50YudzeyH2x0gz7LeDmDyA9wWccAvD27F3m.L0c9XZXgxxzG","role":"employee"}
+2025-09-18T20:13:53.930Z [info]: Created new user: {"userName":"user2","password":"pass2"}
+2025-09-18T20:18:14.753Z [info]: Incoming POST : /users/register
+2025-09-18T20:19:53.944Z [info]: Incoming POST : /users/register
+2025-09-18T20:21:48.851Z [info]: Incoming POST : /users/register
+2025-09-18T20:22:55.659Z [info]: Incoming POST : /users/register
+2025-09-18T20:41:12.679Z [info]: Server is listening on http://localhost:3000
+2025-09-18T20:55:59.658Z [info]: Incoming POST : /users/register
+2025-09-18T20:56:29.166Z [info]: Incoming POST : /users/register
+2025-09-18T20:57:21.459Z [info]: Server is listening on http://localhost:3000
+2025-09-18T20:57:38.196Z [info]: Incoming POST : /users/register
+2025-09-18T20:58:54.897Z [info]: Incoming POST : /users/register
+2025-09-18T21:00:08.898Z [info]: Incoming POST : /users/register
+2025-09-18T21:00:09.212Z [info]: userDAO : PUT command complete {"PK":"USER#user2","SK":"PROFILE","password":"$2b$10$gJTahgwTWLqEgGlSJ7O5Cuns7yUJHASUMtuwPBZFLK7VL3NhIk7n6","role":"employee"}
+2025-09-18T21:00:09.212Z [info]: Created new user: {"userName":"user2","password":"pass2"}
+2025-09-18T21:00:53.411Z [info]: Incoming POST : /users/register
+2025-09-18T21:00:53.526Z [info]: userDAO : Put Command failed user2
+2025-09-18T21:00:53.526Z [error]: The conditional request failed
+2025-09-18T21:00:53.527Z [info]: User already exists: {"userName":"user2","password":"pass2"}
+2025-09-18T21:02:38.987Z [info]: Incoming POST : /users/login
+2025-09-18T21:03:35.054Z [info]: Incoming POST : /users/login
+2025-09-18T21:03:35.187Z [info]: userDAO : Get command complete {"SK":"PROFILE","password":"$2b$10$gJTahgwTWLqEgGlSJ7O5Cuns7yUJHASUMtuwPBZFLK7VL3NhIk7n6","PK":"USER#user2","role":"employee"}
+2025-09-18T21:03:35.294Z [info]: User credentials mismatch user2
+2025-09-18T21:04:42.081Z [info]: Incoming POST : /users/login
+2025-09-18T21:04:42.110Z [info]: userDAO : Get command complete {"SK":"PROFILE","password":"$2b$10$4JpRC7c2DO6yZ.2MZG/Rte9l3KF04O426mft5RgKDxSad3p312HDy","PK":"USER#user1","role":"employee"}
+2025-09-18T21:04:42.182Z [info]: User logged in successfully user1
+2025-09-18T21:07:27.444Z [info]: Incoming GET : /tickets/user1
+2025-09-18T21:07:27.652Z [info]: ticketDAO : Query command complete [{"amount":10,"SK":"TICKET#1077635b-fc1a-4201-9be6-3f2dcd70f596","PK":"USER#user1","description":"donation","status":"Denied","type":"goodwill"},{"amount":600,"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","description":"equipment","PK":"USER#user1","type":"general","status":"Pending"},{"amount":22,"SK":"TICKET#621c1b1e-a291-4eec-bd39-82b2d29223bf","PK":"USER#user1","description":"lodging","status":"Approved","type":"travel"},{"amount":14.22,"SK":"TICKET#8aa42aa7-2a9c-42b1-a5c4-2d551715a043","PK":"USER#user1","description":"training","status":"Approved","type":"general"},{"amount":200.4,"SK":"TICKET#ticket2","PK":"USER#user1","description":"client dinner","status":"Approved","type":"food"}]
+2025-09-18T21:07:27.653Z [info]: Ticket history retrieved successfully for user1
+2025-09-18T21:09:02.417Z [info]: Incoming POST : /tickets/user3
+2025-09-18T21:09:23.101Z [info]: Incoming GET : /tickets/user3
+2025-09-18T21:12:28.875Z [info]: Incoming POST : /tickets
+2025-09-18T21:12:29.042Z [info]: ticketDAO : PUT command complete {"PK":"USER#user1","SK":"TICKET#3dc3cf5f-37c9-4a20-a950-8bb6836c9376","amount":300,"description":"offsite","type":"travel","status":"Pending"}
+2025-09-18T21:12:29.043Z [info]: Created new ticket: {"PK":"USER#user1","SK":"TICKET#3dc3cf5f-37c9-4a20-a950-8bb6836c9376","amount":300,"description":"offsite","type":"travel","status":"Pending"}
+2025-09-18T21:14:56.873Z [info]: Incoming POST : /tickets
+2025-09-18T21:16:30.874Z [info]: Incoming GET : /tickets?status=Pending
+2025-09-18T21:18:36.294Z [info]: Incoming PATCH : /tickets/user1/3dc3cf5f-37c9-4a20-a950-8bb6836c9376
+2025-09-18T21:20:05.727Z [info]: Incoming POST : /users/login
+2025-09-18T21:20:05.906Z [info]: userDAO : Get command complete {"SK":"PROFILE","password":"$2b$10$nsFgKaedcJOzwqaS3IKi8.iHnWqqQ6b/ZvwbG5UAsqsZk66rvpoS6","PK":"USER#manager1","role":"manager"}
+2025-09-18T21:20:05.990Z [info]: User logged in successfully manager1
+2025-09-18T21:21:43.169Z [info]: Incoming POST : /tickets
+2025-09-18T21:21:43.215Z [error]: An error occurred:
+2025-09-18T21:21:43.263Z [error]: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:700:11)
+    at ServerResponse.header (C:\Users\saira\ticket_reimbursement_system\node_modules\express\lib\response.js:684:10)
+    at ServerResponse.send (C:\Users\saira\ticket_reimbursement_system\node_modules\express\lib\response.js:161:12)
+    at ServerResponse.json (C:\Users\saira\ticket_reimbursement_system\node_modules\express\lib\response.js:250:15)
+    at validatePostTicketMiddleware (C:\Users\saira\ticket_reimbursement_system\src\util\ticketValidation.js:14:25)
+    at Layer.handleRequest (C:\Users\saira\ticket_reimbursement_system\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\saira\ticket_reimbursement_system\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\saira\ticket_reimbursement_system\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\saira\ticket_reimbursement_system\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\saira\ticket_reimbursement_system\node_modules\router\lib\layer.js:152:17)
+2025-09-18T21:22:58.065Z [info]: Incoming GET : /tickets?status=Pending
+2025-09-18T21:22:58.319Z [info]: ticketDAO : Scan command complete [{"amount":22,"SK":"TICKET#496e3cfc-1d9f-4a2e-ab67-e65fcbd8b210","description":"entertainment","PK":"USER#user3","type":"entertainment","status":"Pending"},{"amount":600,"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","description":"equipment","PK":"USER#user1","type":"general","status":"Pending"},{"amount":300,"SK":"TICKET#3dc3cf5f-37c9-4a20-a950-8bb6836c9376","description":"offsite","PK":"USER#user1","type":"travel","status":"Pending"}]
+2025-09-18T21:22:58.320Z [info]: Pending tickets retrieved successfully
+2025-09-18T21:24:56.288Z [info]: Incoming PATCH : /tickets/user1/1077635b-fc1a-4201-9be6-3f2dcd7
+2025-09-18T21:24:56.434Z [info]: ticketDAO : Update command failed 1077635b-fc1a-4201-9be6-3f2dcd7 Denied
+2025-09-18T21:24:56.435Z [error]: The conditional request failed
+2025-09-18T21:24:56.436Z [info]: Ticket either does not exist or is already processed: 1077635b-fc1a-4201-9be6-3f2dcd7
+2025-09-18T21:26:27.302Z [info]: Incoming PATCH : /tickets/user1/20b623ed-d1b6-4136-b11b-5defcb282df2
+2025-09-18T21:26:27.344Z [info]: ticketDAO : Update command complete {"SK":"TICKET#20b623ed-d1b6-4136-b11b-5defcb282df2","amount":600,"PK":"USER#user1","description":"equipment","status":"Denied","type":"general"}
+2025-09-18T21:26:27.390Z [info]: Updated ticket 20b623ed-d1b6-4136-b11b-5defcb282df2 status Denied
+2025-09-18T21:27:21.627Z [info]: Incoming PATCH : /tickets/user1/20b623ed-d1b6-4136-b11b-5defcb282df2
+2025-09-18T21:27:47.816Z [info]: Incoming PATCH : /tickets/user1/20b623ed-d1b6-4136-b11b-5defcb282df2
+2025-09-18T21:28:06.157Z [info]: Incoming PATCH : /tickets/user1/20b623ed-d1b6-4136-b11b-5defcb282df2
+2025-09-18T21:28:06.161Z [error]: jwt expired
+2025-09-18T21:28:57.593Z [info]: Incoming PATCH : /tickets/user1/20b623ed-d1b6-4136-b11b-5defcb282df2
+2025-09-18T21:28:57.758Z [info]: ticketDAO : Update command failed 20b623ed-d1b6-4136-b11b-5defcb282df2 Approved
+2025-09-18T21:28:57.759Z [error]: The conditional request failed
+2025-09-18T21:28:57.762Z [info]: Ticket either does not exist or is already processed: 20b623ed-d1b6-4136-b11b-5defcb282df2

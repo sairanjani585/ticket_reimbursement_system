@@ -1,7 +1,6 @@
 const {DynamoDBClient} = require('@aws-sdk/client-dynamodb');
 const {DynamoDBDocumentClient,PutCommand, GetCommand} = require('@aws-sdk/lib-dynamodb');
 const {logger} = require("../util/logger");
-
 const client = new DynamoDBClient({region: "us-east-1"});
 const documentClient = DynamoDBDocumentClient.from(client);
 
@@ -9,7 +8,6 @@ const TableName = 'TicketReimbursement';
 
     async function postUser(userName,hashedPassword)
     {
-       
         const params = {
             TableName,
             Item : {
@@ -41,10 +39,8 @@ const TableName = 'TicketReimbursement';
 
     }
 
-    
     async function getUserByName(userName)
     {
-        
         const command = new GetCommand({
             TableName,
             Key : {

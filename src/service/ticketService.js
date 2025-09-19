@@ -1,7 +1,6 @@
 const ticketDAO = require("../repository/ticketDAO");
 const {logger} = require("../util/logger");
 
-
 async function postTicket(ticket) {
     const ticketId = crypto.randomUUID();
     const newTicket = {

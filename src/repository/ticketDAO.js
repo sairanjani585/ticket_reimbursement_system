@@ -1,7 +1,6 @@
 const {DynamoDBClient} = require('@aws-sdk/client-dynamodb');
 const {DynamoDBDocumentClient,PutCommand, QueryCommand, ScanCommand, UpdateCommand,GetCommand} = require('@aws-sdk/lib-dynamodb');
 const {logger} = require("../util/logger");
-
 const client = new DynamoDBClient({region: "us-east-1"});
 const documentClient = DynamoDBDocumentClient.from(client);
 
@@ -32,7 +31,6 @@ const TableName = 'TicketReimbursement';
             return null;
         }
     }
-
     
     async function getTicketsByUser(userName)
     {
@@ -64,7 +62,6 @@ const TableName = 'TicketReimbursement';
             ExpressionAttributeNames: {"#status": "status"},
             ExpressionAttributeValues: {":status":ticketStatus}
         });
-        
         try{
             const data = await documentClient.send(command);
             logger.info(`ticketDAO : Scan command complete ${JSON.stringify(data.Items)}`);
@@ -76,7 +73,6 @@ const TableName = 'TicketReimbursement';
         }
     }
  
-
     async function updateTicketStatus(userName, ticketId, status)
     {
         const pendingStatus = "Pending";
